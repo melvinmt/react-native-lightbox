@@ -96,7 +96,7 @@ export default class Lightbox extends Component {
           });
         }
         setTimeout(() => {
-          this._root && this.state.layoutOpacity.setValue(0);
+          // this._root && this.state.layoutOpacity.setValue(0);
         });
       });
     });
@@ -126,7 +126,7 @@ export default class Lightbox extends Component {
         style={this.props.style}
         onLayout={() => {}}
       >
-        <View style={{opacity: this.state.layoutOpacity}}>
+        <View>
           <TouchableHighlight
             underlayColor={this.props.underlayColor}
             onPress={this.open}
