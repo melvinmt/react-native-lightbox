@@ -9,6 +9,7 @@ export default class Lightbox extends Component {
     activeProps:     PropTypes.object,
     renderHeader:    PropTypes.func,
     renderContent:   PropTypes.func,
+    onLongPress:     PropTypes.func,
     underlayColor:   PropTypes.string,
     backgroundColor: PropTypes.string,
     didOpen:         PropTypes.func,
@@ -129,6 +130,7 @@ export default class Lightbox extends Component {
           <TouchableHighlight
             underlayColor={this.props.underlayColor}
             onPress={this.open}
+            onLongPress={this.props.onLongPress}
           >
             {this.props.children}
           </TouchableHighlight>
